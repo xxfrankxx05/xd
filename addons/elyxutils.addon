@@ -1,0 +1,47 @@
+:main
+a_name Elyx utils
+a_version 1.0
+a_author elyx
+
+:button restaurar_playit
+text Restaurar Playit
+cls
+say Restaurando playit...
+exec playit reset && sudo apt remove playit -y
+cls
+say Playit restaurado.
+pause
+
+:button eliminar_mundo
+text Eliminar mundo (No el servidor, solo el mundo)
+cls
+exec rm -rf world && rm -rf ./servidor_minecraft/world
+say Mundo eliminado!
+pause
+
+:button reinstalar_java8
+text Reinstalar Java 8 ( < 1.14 )
+cls
+say Reinstalando Java 8...
+java_reinstall 8
+cls
+say Java 8 reinstalado.
+pause
+
+:button reinstalar_java11
+text Reinstalar Java 11 ( >= 1.14 & < 1.17 )
+cls
+say Reinstalando Java 11...
+java_reinstall 11
+cls
+say Java 11 reinstalado.
+pause
+
+:button reinstalar_java17
+text Reinstalar Java 17 ( > 1.17)
+cls
+say Reinstalando Java 17...
+java_reinstall 17
+cls
+say Java 17 reinstalado.
+pause
